@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug axolotl prompt",
+      "type": "python",
+      "module": "accelerate.commands.launch",
+      "request": "launch",
+      "args": [
+        "-m",
+        "axolotl.cli.train",
+        "configs/test.yaml",
+        "--dataset_processes=1",
+        "--max_steps=1",
+        "--val_set_size=0",
+        "--sample_packing=False",
+        "--eval_sample_packing=False",
+        "--dataset_prepared_path=temp_debug/axolotl_outputs/data",
+        "--output_dir=temp_debug/axolotl_outputs/model"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "1",
+        "PYTHONPATH": "src"
+      }
+    }
+  ]
+}

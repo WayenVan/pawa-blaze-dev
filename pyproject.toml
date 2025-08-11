@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pawa-blaze"
+version = "0.0.1"
+description = "A Python package for Pawa Blaze"
+authors = [{ name = "jingyan wang", email = "wayenvan@outlook.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pawa_blaze", "pawa_blaze.*"]
